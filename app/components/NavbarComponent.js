@@ -50,41 +50,106 @@ const NavbarComponent = () => {
                                 </Offcanvas.Header>
                                 <Offcanvas.Body>
                                     <Nav className="justify-content-end flex-grow-1 pe-3 homeBtn">
-                                        <Nav.Link style={{fontWeight:"bold"}} >
-                                            <Link onClick={() => handleClick('home')} href="/" style={{textDecoration:'none',color:isActive=='home'?'gray':'white'}}>
-                                                Home
-                                            </Link>
-                                        </Nav.Link>
-                                        <Nav.Link style={{fontWeight:"bold"}}>
-                                            <Link onClick={() => handleClick('about')}  href="/blog"  style={{textDecoration:'none',color:isActive=='about'?'gray':'white'}}>
+                                        <Link href="/">
+                                            <button
+                                                onClick={() => handleClick('home')}
+                                                style={{
+                                                    backgroundColor: Colors.colorA,
+                                                    border: "none",
+                                                    color: isActive === 'home' ? 'gray' : 'white',
+                                                    fontWeight:'bold',
+                                                    paddingRight:15
+                                                }}
+                                            >
+                                                    Home
+                                            </button>
+                                        </Link>
+                                        <Link href="/blog">
+                                            <button
+                                                onClick={() => handleClick('about')}
+                                                style={{
+                                                    backgroundColor: Colors.colorA,
+                                                    border: "none",
+                                                    color: isActive === 'about' ? 'gray' : 'white',
+                                                    fontWeight:'bold',
+                                                    paddingRight:15
+                                                }}
+                                            >
                                                 About Us
-                                            </Link>
-                                        </Nav.Link>
-                                        <Nav.Link style={{fontWeight:"bold"}}>
-                                            <Link onClick={() => handleClick('about')}  href="/blog"  style={{textDecoration:'none',color:isActive=='about'?'gray':'white'}}>
+                                            </button>
+                                        </Link>
+
+                                        <Link href="/blog">
+                                            <button
+                                                onClick={() => handleClick('feedbacks')}
+                                                style={{
+                                                    backgroundColor: Colors.colorA,
+                                                    border: "none",
+                                                    color: isActive === 'feedbacks' ? 'gray' : 'white',
+                                                    fontWeight:'bold',
+                                                    paddingRight:15
+                                                }}
+                                            >
                                                 Feedbacks
-                                            </Link>
-                                        </Nav.Link>
-                                        <Nav.Link style={{fontWeight:"bold"}}>
-                                            <Link onClick={() => handleClick('about')}  href="/blog"  style={{textDecoration:'none',color:isActive=='about'?'gray':'white'}}>
+                                            </button>
+                                        </Link>
+                                        <Link href="/blog">
+                                            <button
+                                                onClick={() => handleClick('rejections')}
+                                                style={{
+                                                    backgroundColor: Colors.colorA,
+                                                    border: "none",
+                                                    color: isActive === 'rejections' ? 'gray' : 'white',
+                                                    fontWeight:'bold',
+                                                    paddingRight:15
+                                                }}
+                                            >
                                                 Rejections
-                                            </Link>
-                                        </Nav.Link>
-                                        <Nav.Link style={{fontWeight:"bold"}}>
-                                            <Link onClick={() => handleClick('about')}  href="/blog"  style={{textDecoration:'none',color:isActive=='about'?'gray':'white'}}>
+                                            </button>
+                                        </Link>
+                                        <Link href="/blog">
+                                            <button
+                                                onClick={() => handleClick('tutorial')}
+                                                style={{
+                                                    backgroundColor: Colors.colorA,
+                                                    border: "none",
+                                                    color: isActive === 'tutorial' ? 'gray' : 'white',
+                                                    fontWeight:'bold',
+                                                    paddingRight:15
+                                                }}
+                                            >
                                                 Tutorial
-                                            </Link>
-                                        </Nav.Link>
-                                        <Nav.Link style={{fontWeight:"bold"}}>
-                                            <Link onClick={() => handleClick('about')}  href="/blog"  style={{textDecoration:'none',color:isActive=='about'?'gray':'white'}}>
+                                            </button>
+                                        </Link>
+                                        <Link href="/blog">
+                                            <button
+                                                onClick={() => handleClick('faq')}
+                                                style={{
+                                                    backgroundColor: Colors.colorA,
+                                                    border: "none",
+                                                    color: isActive === 'faq' ? 'gray' : 'white',
+                                                    fontWeight:'bold',
+                                                    paddingRight:15
+                                                }}
+                                            >
                                                 FAQ
-                                            </Link>
-                                        </Nav.Link>
-                                        <Nav.Link style={{fontWeight:"bold"}}>
-                                            <Link onClick={() => handleClick('about')}  href="/blog"  style={{textDecoration:'none',color:isActive=='about'?'gray':'white'}}>
+                                            </button>
+                                        </Link>
+                                        <Link href="/blog">
+                                            <button
+                                                onClick={() => handleClick('contact')}
+                                                style={{
+                                                    backgroundColor: Colors.colorA,
+                                                    border: "none",
+                                                    color: isActive === 'contact' ? 'gray' : 'white',
+                                                    fontWeight:'bold',
+                                                    paddingRight:15
+                                                }}
+                                            >
                                                 Contact Us
-                                            </Link>
-                                        </Nav.Link>
+                                            </button>
+                                        </Link>
+
                                     </Nav>
 
                                 </Offcanvas.Body>
