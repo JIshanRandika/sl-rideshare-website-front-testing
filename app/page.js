@@ -9,23 +9,23 @@ const items = [
   {
     src: 'https://media.istockphoto.com/id/1313437793/photo/epic-aerial-view-of-night-scene-of-victoria-harbour-hong-kong.webp?b=1&s=170667a&w=0&k=20&c=z1KG3afS3nfOmwahauSiz3vXXOqPYz49DIivUwibMxM=',
     altText: "Slide 1",
-    caption: "",
-    header: "",
-    key: "1",
+    // caption: "",
+    // header: "",
+    // key: "1",
   },
   {
     src: 'https://media.istockphoto.com/id/1313437793/photo/epic-aerial-view-of-night-scene-of-victoria-harbour-hong-kong.webp?b=1&s=170667a&w=0&k=20&c=z1KG3afS3nfOmwahauSiz3vXXOqPYz49DIivUwibMxM=',
     altText: "Slide 2",
-    caption: "",
-    header: "",
-    key: "2",
+    // caption: "",
+    // header: "",
+    // key: "2",
   },
   {
     src: 'https://media.istockphoto.com/id/1313437793/photo/epic-aerial-view-of-night-scene-of-victoria-harbour-hong-kong.webp?b=1&s=170667a&w=0&k=20&c=z1KG3afS3nfOmwahauSiz3vXXOqPYz49DIivUwibMxM=',
     altText: "Slide 3",
-    caption: "",
-    header: "",
-    key: "3",
+    // caption: "",
+    // header: "",
+    // key: "3",
   },
 ];
 export default function Home() {
@@ -46,8 +46,8 @@ export default function Home() {
         <Row style={{paddingLeft:100, paddingRight:100, paddingTop:30}}>
             <Col md="6" xs="12" className="mx-auto" style={{display:"flex",alignItems:"center", justifyContent:"center"}}>
               <div style={{fontSize:18}}>
-                The Institute of Electrical and Electronics Engineers (IEEE) is the world's largest technical professional organization dedicated to technological advancement. IEEE student branch of Sabaragamuwa University of Sri Lanka was established in 2016 with the major goal of inheriting and retaining a high number of members and to engage in many community services thereby serving humanity for tomorrow.
-                The Institute of Electrical and Electronics Engineers (IEEE) is the world's largest technical professional organization dedicated to technological advancement. IEEE student branch of Sabaragamuwa University of Sri Lanka was established in 2016 with the major goal of inheriting and retaining a high number of members and to engage in many community services thereby serving humanity for tomorrow.
+                The Institute of Electrical and Electronics Engineers (IEEE) is the world largest technical professional organization dedicated to technological advancement. IEEE student branch of Sabaragamuwa University of Sri Lanka was established in 2016 with the major goal of inheriting and retaining a high number of members and to engage in many community services thereby serving humanity for tomorrow.
+                The Institute of Electrical and Electronics Engineers (IEEE) is the world largest technical professional organization dedicated to technological advancement. IEEE student branch of Sabaragamuwa University of Sri Lanka was established in 2016 with the major goal of inheriting and retaining a high number of members and to engage in many community services thereby serving humanity for tomorrow.
               </div>
             </Col>
             <Col md="6" xs="12" className="mx-auto">
@@ -134,7 +134,7 @@ export default function Home() {
                           <button style={{
                               border: "none",
                               // paddingBottom: 10,
-                              backgroundColor: "#ffffff",
+                              backgroundColor: '&apos;',
                               // marginBottom: 50,
                               borderRadius: 30,
                               webkitBoxShadow: "9px 12px 45px -5px #000000",
@@ -150,7 +150,7 @@ export default function Home() {
                           <button style={{
                               border: "none",
                               // paddingBottom: 10,
-                              backgroundColor: "#ffffff",
+                              backgroundColor: '&apos;',
                               marginTop: 30,
                               borderRadius: 30,
                               webkitBoxShadow: "9px 12px 45px -5px #000000",
@@ -166,7 +166,7 @@ export default function Home() {
                           <button style={{
                               border: "none",
                               // paddingBottom: 10,
-                              backgroundColor: "#ffffff",
+                              backgroundColor: '&apos;',
                               marginTop: 30,
                               marginBottom: 30,
                               borderRadius: 30,

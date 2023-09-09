@@ -24,7 +24,7 @@ const NavbarComponent = () => {
 
                 {['sm'].map((expand) => (
 
-                    <Navbar className="navbar" expand={expand} >
+                    <Navbar key={expand} className="navbar" expand={expand} >
                         <Container fluid>
                             <Navbar.Brand href="/">
 
