@@ -196,7 +196,7 @@ function ContactUS() {
                                        height={35}
                                        style={{marginRight:20}}
                                 />
-                                ieeesuslsb@gmail.com
+                                slrideshare.info@gmail.com
                             </div>
                             <div style={{
                                 fontSize: 18,

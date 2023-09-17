@@ -392,8 +392,8 @@ export default function Home() {
                   {/*/>*/}
               </VerticalTimeline>
           </Row>
-          <Row style={{paddingLeft:100, paddingRight:100, paddingTop:100, marginTop:20, backgroundColor:"black"}}>
-          </Row>
+          {/*<Row style={{paddingLeft:100, paddingRight:100, paddingTop:100, marginTop:20, backgroundColor:"black"}}>*/}
+          {/*</Row>*/}
 
       </>
 

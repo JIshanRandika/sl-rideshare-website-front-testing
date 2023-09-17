@@ -1,11 +1,12 @@
 import './globals.css'
 import { Inter } from 'next/font/google'
-import Navbar from '@/app/components/NavbarComponent';
+import Navbar from '@/app/components/navbar.component';
 import 'bootstrap/dist/css/bootstrap.css';
 
 import '@fortawesome/fontawesome-free/css/all.min.css';
 import 'bootstrap-css-only/css/bootstrap.min.css';
 import 'mdbreact/dist/css/mdb.css';
+import FooterComponent from "./components/footer.component";
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -19,7 +20,9 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <body style={{marginTop:76}} className={inter.className}>
       <Navbar/>
-      {children}</body>
+      {children}
+      <FooterComponent/>
+      </body>
     </html>
   )
 }
