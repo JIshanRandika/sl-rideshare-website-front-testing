@@ -2,6 +2,7 @@
 import Image from 'next/image'
 import styles from './page.module.css'
 import '@/app/styles/mock.scss'
+import { useState } from 'react';
 
 import {UncontrolledCarousel, Row, Col, Container} from "reactstrap";
 import {Colors} from "./constants/colors";
@@ -29,6 +30,20 @@ const items = [
   },
 ];
 export default function Home() {
+
+    const [currentLanguage, setCurrentLanguage] = useState('english'); // Default to English
+
+    const handleLanguageChange = (language) => {
+        setCurrentLanguage(language);
+    };
+
+    // Define video IDs for each language
+    const videoIds = {
+        sinhala: 'SINHALA_VIDEO_ID_HERE',
+        tamil: 'TAMIL_VIDEO_ID_HERE',
+        english: 'ENGLISH_VIDEO_ID_HERE',
+    };
+
   return (
       <>
         <Row>
@@ -51,7 +66,7 @@ export default function Home() {
               </div>
             </Col>
             <Col md="6" xs="12" className="mx-auto">
-              {/*//laptop view*/}
+
                 <div style={{ position: 'relative', paddingBottom: '56.25%', height: 0 }}>
                     <iframe
                         title="YouTube Video"
@@ -60,6 +75,11 @@ export default function Home() {
                         allowFullScreen
                         style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '100%' }}
                     ></iframe>
+                </div>
+                <div style={{display:"flex", justifyContent:"center"}} className="language-buttons">
+                    <button style={{backgroundColor:Colors.colorA, border:"none", margin:20, color:"white", padding:10,borderRadius:10}} onClick={() => handleLanguageChange('sinhala')}>Sinhala</button>
+                    <button style={{backgroundColor:Colors.colorA, border:"none", margin:20, color:"white", padding:10,borderRadius:10}} onClick={() => handleLanguageChange('tamil')}>Tamil</button>
+                    <button style={{backgroundColor:Colors.colorA, border:"none", margin:20, color:"white", padding:10,borderRadius:10}} onClick={() => handleLanguageChange('english')}>English</button>
                 </div>
             </Col>
         </Row>
@@ -83,6 +103,9 @@ export default function Home() {
                   <Row style={{display:"flex", justifyContent:"center", alignItems:"center", marginTop:10}}>
                       <div style={{textAlign:"center", fontWeight:"bold", fontSize:20}}>Schedule</div>
                   </Row>
+                  <Row style={{display:"flex", justifyContent:"center", alignItems:"center"}}>
+                      <div style={{textAlign:"center", fontSize:12}}>The Institute of Electrical and Electronics Engineers (IEEE) is the world largest technical professional organization dedicated to technological advancement.</div>
+                  </Row>
               </Col>
               <Col md="4" xs="12" className="mx-auto" >
                   <Row style={{display:"flex", justifyContent:"center", alignItems:"center"}}>
@@ -97,6 +120,9 @@ export default function Home() {
                   <Row style={{display:"flex", justifyContent:"center", alignItems:"center", marginTop:10}}>
                       <div style={{textAlign:"center", fontWeight:"bold", fontSize:20}}>Live</div>
                   </Row>
+                  <Row style={{display:"flex", justifyContent:"center", alignItems:"center"}}>
+                      <div style={{textAlign:"center", fontSize:12}}>The Institute of Electrical and Electronics Engineers (IEEE) is the world largest technical professional organization dedicated to technological advancement.</div>
+                  </Row>
               </Col>
               <Col md="4" xs="12" className="mx-auto" >
                   <Row style={{display:"flex", justifyContent:"center", alignItems:"center"}}>
@@ -110,6 +136,9 @@ export default function Home() {
                   </Row>
                   <Row style={{display:"flex", justifyContent:"center", alignItems:"center", marginTop:10}}>
                       <div style={{textAlign:"center", fontWeight:"bold", fontSize:20}}>Hire</div>
+                  </Row>
+                  <Row style={{display:"flex", justifyContent:"center", alignItems:"center"}}>
+                      <div style={{textAlign:"center", fontSize:12}}>The Institute of Electrical and Electronics Engineers (IEEE) is the world largest technical professional organization dedicated to technological advancement.</div>
                   </Row>
               </Col>
           </Row>
