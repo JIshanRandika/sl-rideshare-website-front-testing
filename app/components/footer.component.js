@@ -20,7 +20,6 @@ export default class FooterComponent extends Component {
                                     fontSize: 10,
                                     // fontWeight: 'bold',
                                     color: 'white',
-                                    fontFamily:'Open Sans'
                                 }}>
                                     T & C
                                 </a>
@@ -29,14 +28,10 @@ export default class FooterComponent extends Component {
                                     // fontWeight: 'bold',
                                     marginLeft:10,
                                     color: 'white',
-                                    fontFamily:'Open Sans'
                                 }}>
                                     Privacy Policy
                                 </a>
                             </Container>
-
-
-
                         </Col>
                         <Col md="6" xs="12" style={{display:"flex", justifyContent:'center'}}>
                             <Container style={{display:"flex", justifyContent:"center"}}>
@@ -44,8 +39,6 @@ export default class FooterComponent extends Component {
                                     fontSize: 10,
                                     // fontWeight: 'bold',
                                     color: 'white',
-                                    fontFamily:'Open Sans'
-
                                 }}>
                                     @ Copyright 2023 SL Rideshare – All rights reserved.<br/>
                                 </div>
