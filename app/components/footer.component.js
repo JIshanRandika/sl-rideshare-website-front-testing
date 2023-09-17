@@ -6,13 +6,12 @@ import Image from "next/image";
 
 export default class FooterComponent extends Component {
     render() {
-
         return (
-
             <div style={{position: 'relative', bottom: 0, width: '100%',}}>
                 <div style={{
                     backgroundColor: '#000000',
-                }}>
+                }}
+                >
                     <Row>
                         <Col md="3" xs="12" style={{display:"flex", justifyContent:"center"}}>
                             <Container style={{display:"flex", justifyContent:"center", padding:10}}>
