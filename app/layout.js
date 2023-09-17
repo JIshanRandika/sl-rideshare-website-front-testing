@@ -3,6 +3,10 @@ import { Inter } from 'next/font/google'
 import Navbar from '@/app/components/NavbarComponent';
 import 'bootstrap/dist/css/bootstrap.css';
 
+import '@fortawesome/fontawesome-free/css/all.min.css';
+import 'bootstrap-css-only/css/bootstrap.min.css';
+import 'mdbreact/dist/css/mdb.css';
+
 const inter = Inter({ subsets: ['latin'] })
 
 export const metadata = {
@@ -13,7 +17,7 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={inter.className}>
+      <body style={{marginTop:76}} className={inter.className}>
       <Navbar/>
       {children}</body>
     </html>

@@ -8,6 +8,7 @@ import Link from "next/link";
 import {Navbar, Container, Nav, NavDropdown,Form,Offcanvas} from 'react-bootstrap';
 import {Colors} from '../constants/colors'
 import Image from "next/image";
+
 // import '../constants/styles.css'
 
 const NavbarComponent = () => {
@@ -20,11 +21,11 @@ const NavbarComponent = () => {
     // @ts-ignore
     return (
         <>
-            <div style={{width: "100%", position: "sticky", top: 0, zIndex: 2, padding: 0}}>
+            <div style={{width: "100%", position: "fixed", top: 0, zIndex: 2, padding: 0}}>
 
                 {['sm'].map((expand) => (
 
-                    <Navbar key={expand} className="navbar" expand={expand} >
+                    <Navbar  key={expand} className="navbar" expand={expand} >
                         <Container fluid>
                             <Navbar.Brand href="/">
 
@@ -64,7 +65,7 @@ const NavbarComponent = () => {
                                                     Home
                                             </button>
                                         </Link>
-                                        <Link href="/blog">
+                                        <Link href="/#about">
                                             <button
                                                 onClick={() => handleClick('about')}
                                                 style={{
@@ -79,7 +80,7 @@ const NavbarComponent = () => {
                                             </button>
                                         </Link>
 
-                                        <Link href="/blog">
+                                        <Link href="/#feedbacks ">
                                             <button
                                                 onClick={() => handleClick('feedbacks')}
                                                 style={{
@@ -93,7 +94,7 @@ const NavbarComponent = () => {
                                                 Feedbacks
                                             </button>
                                         </Link>
-                                        <Link href="/blog">
+                                        <Link href="/rejections">
                                             <button
                                                 onClick={() => handleClick('rejections')}
                                                 style={{
@@ -121,7 +122,7 @@ const NavbarComponent = () => {
                                                 Tutorial
                                             </button>
                                         </Link>
-                                        <Link href="/blog">
+                                        <Link href="/#faq">
                                             <button
                                                 onClick={() => handleClick('faq')}
                                                 style={{
@@ -135,7 +136,7 @@ const NavbarComponent = () => {
                                                 FAQ
                                             </button>
                                         </Link>
-                                        <Link href="/blog">
+                                        <Link href="/contactUs">
                                             <button
                                                 onClick={() => handleClick('contact')}
                                                 style={{

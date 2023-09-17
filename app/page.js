@@ -3,6 +3,9 @@ import Image from 'next/image'
 import styles from './page.module.css'
 import '@/app/styles/mock.scss'
 import { useState } from 'react';
+import Faq from "react-faq-component";
+import { VerticalTimeline, VerticalTimelineElement }  from 'react-vertical-timeline-component';
+import 'react-vertical-timeline-component/style.min.css';
 
 import {UncontrolledCarousel, Row, Col, Container} from "reactstrap";
 import {Colors} from "./constants/colors";
@@ -29,6 +32,51 @@ const items = [
     // key: "3",
   },
 ];
+
+const data = {
+    title: " ",
+    rows: [
+        {
+            title: "Lorem ipsum dolor sit amet,",
+            content: `Lorem ipsum dolor sit amet, consectetur adipiscing elit. In sed tempor sem. Aenean vel turpis feugiat,
+              ultricies metus at, consequat velit. Curabitur est nibh, varius in tellus nec, mattis pulvinar metus.
+              In maximus cursus lorem, nec laoreet velit eleifend vel. Ut aliquet mauris tortor, sed egestas libero interdum vitae.
+              Fusce sed commodo purus, at tempus turpis.`,
+        },
+        {
+            title: "Nunc maximus, magna at ultricies elementum",
+            content:
+                "Nunc maximus, magna at ultricies elementum, risus turpis vulputate quam, vitae convallis ex tortor sed dolor.",
+        },
+        {
+            title: "Curabitur laoreet, mauris vel blandit fringilla",
+            content: `Curabitur laoreet, mauris vel blandit fringilla, leo elit rhoncus nunc, ac sagittis leo elit vel lorem.
+            Fusce tempor lacus ut libero posuere viverra. Nunc velit dolor, tincidunt at varius vel, laoreet vel quam.
+            Sed dolor urna, lobortis in arcu auctor, tincidunt mattis ante. Vivamus venenatis ultricies nibh in volutpat.
+            Cras eu metus quis leo vestibulum feugiat nec sagittis lacus.Mauris vulputate arcu sed massa euismod dignissim. `,
+        },
+        {
+            title: "What is the package version",
+            content: <p>current version is 1.2.1</p>,
+        },
+    ],
+};
+
+// const styles = {
+    // bgColor: 'white',
+    // titleTextColor: "blue",
+    // rowTitleColor: "blue",
+    // rowContentColor: 'grey',
+    // arrowColor: "red",
+// };
+
+const config = {
+    // animate: true,
+    // arrowIcon: "V",
+    // tabFocus: true
+};
+
+
 export default function Home() {
 
     const [currentLanguage, setCurrentLanguage] = useState('english'); // Default to English
@@ -39,9 +87,9 @@ export default function Home() {
 
     // Define video IDs for each language
     const videoIds = {
-        sinhala: 'SINHALA_VIDEO_ID_HERE',
-        tamil: 'TAMIL_VIDEO_ID_HERE',
-        english: 'ENGLISH_VIDEO_ID_HERE',
+        sinhala: 'frUyLWSi0pE',
+        tamil: 'IJQUSW9CXL8',
+        english: 'VDBcq8pvxnk',
     };
 
   return (
@@ -51,7 +99,7 @@ export default function Home() {
             <UncontrolledCarousel items={items} />
           </Col>
         </Row>
-        <Row style={{marginTop:20}}>
+        <Row id='about' style={{marginTop:20, scrollMarginTop:76}}>
           <Col  md="12" xs="12" className="mx-auto">
             <div className="text-center d-flex justify-content-center" style={{color:Colors.colorA,fontSize:40, fontWeight:"bold", marginTop:40, marginBottom:10}}>
               What is SL Rideshare?
@@ -70,7 +118,7 @@ export default function Home() {
                 <div style={{ position: 'relative', paddingBottom: '56.25%', height: 0 }}>
                     <iframe
                         title="YouTube Video"
-                        src="https://www.youtube.com/embed/YOUR_VIDEO_ID_HERE"
+                        src={`https://www.youtube.com/embed/${videoIds[currentLanguage]}`}
                         frameBorder="0"
                         allowFullScreen
                         style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '100%' }}
@@ -212,8 +260,139 @@ export default function Home() {
 
               </Col>
           </Row>
-          <Row style={{backgroundColor:'black', height:100}}>
+          <Row id='faq' style={{marginTop:20, scrollMarginTop:76}}>
+              <Col  md="12" xs="12" className="mx-auto">
+                  <div className="text-center d-flex justify-content-center" style={{color:Colors.colorA,fontSize:40, fontWeight:"bold", marginTop:40, marginBottom:10}}>
+                      Frequently Asked Questions
+                  </div>
+              </Col>
+          </Row>
+          <Row style={{paddingLeft:100, paddingRight:100, paddingTop:30}}>
+              <div>
+                  <Faq
+                      data={data}
+                      styles={styles}
+                      config={config}
+                  />
+              </div>
+          </Row>
+          <Row id='feedbacks' style={{marginTop:20, scrollMarginTop:76}}>
+              <Col  md="12" xs="12" className="mx-auto">
+                  <div className="text-center d-flex justify-content-center" style={{color:Colors.colorA,fontSize:40, fontWeight:"bold", marginTop:40, marginBottom:10}}>
+                      Feedbacks
+                  </div>
+              </Col>
+          </Row>
+          <Row style={{paddingLeft:100, paddingRight:100, paddingTop:30}}>
+              <VerticalTimeline>
 
+                  <VerticalTimelineElement
+                      className="vertical-timeline-element--work"
+                      dateClassName='dateClz'
+                      date={
+                          <div>
+                              <h3 className="vertical-timeline-element-title">Web Designer</h3>
+                              <h4 className="vertical-timeline-element-subtitle">San Francisco, CA</h4>
+                              <p>
+                                  User Experience, Visual Design
+                              </p>
+                          </div>
+                      }
+                      iconStyle={{ background: Colors.colorA, borderColor: '#fff', width:50, height:50}}
+                      icon={
+                          <div style={{display:"flex", justifyContent:"center", alignItems:"center", alignContent:"center", height:'100%'}}>
+                              <Image src="/feedback.png"
+                              width={40}
+                              height={40}
+                              />
+                          </div>
+                          }
+                  >
+                      <div style={{height:250}}>
+                          <iframe
+                              title="YouTube Video"
+                              src="https://www.youtube.com/embed/Tmblfb-9Hq8"
+                              frameBorder="0"
+                              allowFullScreen
+                              style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '100%' }}
+                          ></iframe>
+                      </div>
+
+                  </VerticalTimelineElement>
+                  <VerticalTimelineElement
+                      className="vertical-timeline-element--work"
+                      dateClassName='dateClz'
+                      date={
+                          <div>
+                              <h3 className="vertical-timeline-element-title">Web Designer</h3>
+                              <h4 className="vertical-timeline-element-subtitle">San Francisco, CA</h4>
+                              <p>
+                                  User Experience, Visual Design
+                              </p>
+                          </div>
+                      }
+                      iconStyle={{ background: Colors.colorA, borderColor: '#fff', width:50, height:50}}
+                      icon={
+                          <div style={{display:"flex", justifyContent:"center", alignItems:"center", alignContent:"center", height:'100%'}}>
+                              <Image src="/feedback.png"
+                                     width={40}
+                                     height={40}
+                              />
+                          </div>
+                      }
+                  >
+                      <div style={{height:250}}>
+                          <iframe
+                              title="YouTube Video"
+                              src="https://www.youtube.com/embed/Tmblfb-9Hq8"
+                              frameBorder="0"
+                              allowFullScreen
+                              style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '100%' }}
+                          ></iframe>
+                      </div>
+
+                  </VerticalTimelineElement>
+
+                  <VerticalTimelineElement
+                      className="vertical-timeline-element--work"
+                      dateClassName='dateClz'
+                      date={
+                          <div>
+                              <h3 className="vertical-timeline-element-title">Web Designer</h3>
+                              <h4 className="vertical-timeline-element-subtitle">San Francisco, CA</h4>
+                              <p>
+                                  User Experience, Visual Design
+                              </p>
+                          </div>
+                      }
+                      iconStyle={{ background: Colors.colorA, borderColor: '#fff', width:50, height:50}}
+                      icon={
+                          <div style={{display:"flex", justifyContent:"center", alignItems:"center", alignContent:"center", height:'100%'}}>
+                              <Image src="/feedback.png"
+                                     width={40}
+                                     height={40}
+                              />
+                          </div>
+                      }
+                  >
+                      <div style={{height:250}}>
+                          <iframe
+                              title="YouTube Video"
+                              src="https://www.youtube.com/embed/Tmblfb-9Hq8"
+                              frameBorder="0"
+                              allowFullScreen
+                              style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '100%' }}
+                          ></iframe>
+                      </div>
+
+                  </VerticalTimelineElement>
+                  {/*<VerticalTimelineElement*/}
+                  {/*    iconStyle={{ background: 'rgb(16, 204, 82)', color: '#fff' }}*/}
+                  {/*    // icon={<StarIcon />}*/}
+                  {/*/>*/}
+              </VerticalTimeline>
+          </Row>
+          <Row style={{paddingLeft:100, paddingRight:100, paddingTop:100, marginTop:20, backgroundColor:"black"}}>
           </Row>
 
       </>
