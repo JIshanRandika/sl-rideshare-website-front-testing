@@ -99,6 +99,7 @@ export default function Home() {
     },[])
   return (
       <>
+
         <Row>
           <Col  md="12" xs="12" className="mx-auto">
             <UncontrolledCarousel items={items} />
