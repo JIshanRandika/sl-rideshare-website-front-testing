@@ -2,13 +2,14 @@
 import Image from 'next/image'
 import styles from './page.module.css'
 import '@/app/styles/mock.scss'
-import { useState } from 'react';
+import {useEffect, useState} from 'react';
 import Faq from "react-faq-component";
 import { VerticalTimeline, VerticalTimelineElement }  from 'react-vertical-timeline-component';
 import 'react-vertical-timeline-component/style.min.css';
 
 import {UncontrolledCarousel, Row, Col, Container} from "reactstrap";
 import {Colors} from "./constants/colors";
+import AOS from "aos";
 const items = [
   {
     src: 'https://media.istockphoto.com/id/1313437793/photo/epic-aerial-view-of-night-scene-of-victoria-harbour-hong-kong.webp?b=1&s=170667a&w=0&k=20&c=z1KG3afS3nfOmwahauSiz3vXXOqPYz49DIivUwibMxM=',
@@ -91,7 +92,11 @@ export default function Home() {
         tamil: 'IJQUSW9CXL8',
         english: 'VDBcq8pvxnk',
     };
-
+    useEffect(()=>{
+        AOS.init({
+            duration: 2000,
+        })
+    },[])
   return (
       <>
         <Row>
@@ -101,21 +106,21 @@ export default function Home() {
         </Row>
         <Row id='about' style={{marginTop:20, scrollMarginTop:76}}>
           <Col  md="12" xs="12" className="mx-auto">
-            <div className="text-center d-flex justify-content-center" style={{color:Colors.colorA,fontSize:40, fontWeight:"bold", marginTop:40, marginBottom:10}}>
+            <div data-aos="fade-up" data-aos-offset="100" className="text-center d-flex justify-content-center" style={{color:Colors.colorA,fontSize:40, fontWeight:"bold", marginTop:40, marginBottom:10}}>
               What is SL Rideshare?
             </div>
           </Col>
         </Row>
         <Row style={{paddingLeft:100, paddingRight:100, paddingTop:30}}>
             <Col md="6" xs="12" className="mx-auto" style={{display:"flex",alignItems:"center", justifyContent:"center"}}>
-              <div style={{fontSize:18}}>
+              <div data-aos="fade-up" data-aos-offset="100" style={{fontSize:18}}>
                 The Institute of Electrical and Electronics Engineers (IEEE) is the world largest technical professional organization dedicated to technological advancement. IEEE student branch of Sabaragamuwa University of Sri Lanka was established in 2016 with the major goal of inheriting and retaining a high number of members and to engage in many community services thereby serving humanity for tomorrow.
                 The Institute of Electrical and Electronics Engineers (IEEE) is the world largest technical professional organization dedicated to technological advancement. IEEE student branch of Sabaragamuwa University of Sri Lanka was established in 2016 with the major goal of inheriting and retaining a high number of members and to engage in many community services thereby serving humanity for tomorrow.
               </div>
             </Col>
             <Col md="6" xs="12" className="mx-auto">
 
-                <div style={{ position: 'relative', paddingBottom: '56.25%', height: 0 }}>
+                <div data-aos="fade-up" data-aos-offset="100" style={{ position: 'relative', paddingBottom: '56.25%', height: 0 }}>
                     <iframe
                         title="YouTube Video"
                         src={`https://www.youtube.com/embed/${videoIds[currentLanguage]}`}
@@ -125,21 +130,21 @@ export default function Home() {
                     ></iframe>
                 </div>
                 <div style={{display:"flex", justifyContent:"center"}} className="language-buttons">
-                    <button style={{backgroundColor:Colors.colorA, border:"none", margin:20, color:"white", padding:10,borderRadius:10}} onClick={() => handleLanguageChange('sinhala')}>Sinhala</button>
-                    <button style={{backgroundColor:Colors.colorA, border:"none", margin:20, color:"white", padding:10,borderRadius:10}} onClick={() => handleLanguageChange('tamil')}>Tamil</button>
-                    <button style={{backgroundColor:Colors.colorA, border:"none", margin:20, color:"white", padding:10,borderRadius:10}} onClick={() => handleLanguageChange('english')}>English</button>
+                    <button data-aos="fade-up" data-aos-offset="100" style={{backgroundColor:Colors.colorA, border:"none", margin:20, color:"white", padding:10,borderRadius:10}} onClick={() => handleLanguageChange('sinhala')}>Sinhala</button>
+                    <button data-aos="fade-up" data-aos-offset="100" style={{backgroundColor:Colors.colorA, border:"none", margin:20, color:"white", padding:10,borderRadius:10}} onClick={() => handleLanguageChange('tamil')}>Tamil</button>
+                    <button data-aos="fade-up" data-aos-offset="100" style={{backgroundColor:Colors.colorA, border:"none", margin:20, color:"white", padding:10,borderRadius:10}} onClick={() => handleLanguageChange('english')}>English</button>
                 </div>
             </Col>
         </Row>
           <Row style={{marginTop:20}}>
               <Col  md="12" xs="12" className="mx-auto">
-                  <div className="text-center d-flex justify-content-center" style={{color:Colors.colorA,fontSize:40, fontWeight:"bold", marginTop:40, marginBottom:10}}>
+                  <div data-aos="fade-up" data-aos-offset="100" className="text-center d-flex justify-content-center" style={{color:Colors.colorA,fontSize:40, fontWeight:"bold", marginTop:40, marginBottom:10}}>
                       You can
                   </div>
               </Col>
           </Row>
           <Row style={{paddingLeft:100, paddingRight:100, paddingTop:30}}>
-              <Col md="4" xs="12" className="mx-auto" >
+              <Col data-aos="fade-up" data-aos-offset="100" md="4" xs="12" className="mx-auto" >
                   <Row style={{display:"flex", justifyContent:"center", alignItems:"center"}}>
                       <div style={{backgroundColor:Colors.colorA, width:150, height:150, borderRadius:100, display:"flex", justifyContent:"center", alignItems:"center"}}>
                           <Image src="/schedule.png"
@@ -155,7 +160,7 @@ export default function Home() {
                       <div style={{textAlign:"center", fontSize:12}}>The Institute of Electrical and Electronics Engineers (IEEE) is the world largest technical professional organization dedicated to technological advancement.</div>
                   </Row>
               </Col>
-              <Col md="4" xs="12" className="mx-auto" >
+              <Col data-aos="fade-up" data-aos-offset="100" md="4" xs="12" className="mx-auto" >
                   <Row style={{display:"flex", justifyContent:"center", alignItems:"center"}}>
                       <div style={{backgroundColor:Colors.colorA, width:150, height:150, borderRadius:100, display:"flex", justifyContent:"center", alignItems:"center"}}>
                           <Image src="/live.png"
@@ -172,7 +177,7 @@ export default function Home() {
                       <div style={{textAlign:"center", fontSize:12}}>The Institute of Electrical and Electronics Engineers (IEEE) is the world largest technical professional organization dedicated to technological advancement.</div>
                   </Row>
               </Col>
-              <Col md="4" xs="12" className="mx-auto" >
+              <Col data-aos="fade-up" data-aos-offset="100" md="4" xs="12" className="mx-auto" >
                   <Row style={{display:"flex", justifyContent:"center", alignItems:"center"}}>
                       <div style={{backgroundColor:Colors.colorA, width:150, height:150, borderRadius:100, display:"flex", justifyContent:"center", alignItems:"center"}}>
                           <Image src="/hire.png"
@@ -192,13 +197,13 @@ export default function Home() {
           </Row>
           <Row style={{marginTop:20}}>
               <Col  md="12" xs="12" className="mx-auto">
-                  <div className="text-center d-flex justify-content-center" style={{color:Colors.colorA,fontSize:40, fontWeight:"bold", marginTop:40, marginBottom:10}}>
+                  <div data-aos="fade-up" data-aos-offset="100" className="text-center d-flex justify-content-center" style={{color:Colors.colorA,fontSize:40, fontWeight:"bold", marginTop:40, marginBottom:10}}>
                       Download Now
                   </div>
               </Col>
           </Row>
           <Row style={{paddingLeft:100, paddingRight:100, paddingTop:30}}>
-              <Col md="8" xs="12" className="mx-auto" style={{display:"flex", justifyContent:"center"}}>
+              <Col data-aos="fade-up" data-aos-offset="100" md="8" xs="12" className="mx-auto" style={{display:"flex", justifyContent:"center"}}>
                   <Image src="/mock.png"
                          width={700} // Initial width
                          height={440} // Initial height
@@ -207,7 +212,7 @@ export default function Home() {
               </Col>
               <Col md="4" xs="12" className="mx-auto" style={{display:"flex", justifyContent:"center",alignItems:"center"}}>
                   <div>
-                      <Row>
+                      <Row data-aos="fade-up" data-aos-offset="100">
                           <button style={{
                               border: "none",
                               // paddingBottom: 10,
@@ -223,7 +228,7 @@ export default function Home() {
                               />
                           </button>
                       </Row>
-                      <Row>
+                      <Row data-aos="fade-up" data-aos-offset="100">
                           <button style={{
                               border: "none",
                               // paddingBottom: 10,
@@ -239,7 +244,7 @@ export default function Home() {
                               />
                           </button>
                       </Row>
-                      <Row>
+                      <Row data-aos="fade-up" data-aos-offset="100">
                           <button style={{
                               border: "none",
                               // paddingBottom: 10,
@@ -262,12 +267,12 @@ export default function Home() {
           </Row>
           <Row id='faq' style={{marginTop:20, scrollMarginTop:76}}>
               <Col  md="12" xs="12" className="mx-auto">
-                  <div className="text-center d-flex justify-content-center" style={{color:Colors.colorA,fontSize:40, fontWeight:"bold", marginTop:40, marginBottom:10}}>
+                  <div data-aos="fade-up" data-aos-offset="100" className="text-center d-flex justify-content-center" style={{color:Colors.colorA,fontSize:40, fontWeight:"bold", marginTop:40, marginBottom:10}}>
                       Frequently Asked Questions
                   </div>
               </Col>
           </Row>
-          <Row style={{paddingLeft:100, paddingRight:100, paddingTop:30}}>
+          <Row data-aos="fade-up" data-aos-offset="100" style={{paddingLeft:100, paddingRight:100, paddingTop:30}}>
               <div>
                   <Faq
                       data={data}
@@ -278,12 +283,12 @@ export default function Home() {
           </Row>
           <Row id='feedbacks' style={{marginTop:20, scrollMarginTop:76}}>
               <Col  md="12" xs="12" className="mx-auto">
-                  <div className="text-center d-flex justify-content-center" style={{color:Colors.colorA,fontSize:40, fontWeight:"bold", marginTop:40, marginBottom:10}}>
+                  <div data-aos="fade-up" data-aos-offset="100" className="text-center d-flex justify-content-center" style={{color:Colors.colorA,fontSize:40, fontWeight:"bold", marginTop:40, marginBottom:10}}>
                       Feedbacks
                   </div>
               </Col>
           </Row>
-          <Row style={{paddingLeft:100, paddingRight:100, paddingTop:30}}>
+          <Row data-aos="fade-up" data-aos-offset="100" style={{paddingLeft:100, paddingRight:100, paddingTop:30}}>
               <VerticalTimeline>
 
                   <VerticalTimelineElement

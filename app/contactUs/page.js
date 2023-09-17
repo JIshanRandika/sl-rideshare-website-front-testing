@@ -1,11 +1,10 @@
 "use client"
 import {Col, Container, Input, Row} from "reactstrap";
-import React, {useRef, useState} from "react";
+import React, {useEffect, useRef, useState} from "react";
 import emailjs from '@emailjs/browser';
 import AOS from "aos";
 import {Colors} from "../constants/colors";
 import Image from "next/image";
-
 
 function ContactUS() {
     const [firstName, setFirstName] = useState();
@@ -28,9 +27,12 @@ function ContactUS() {
         setEmail(() => "");
         setMessage(() => "");
     }
-    AOS.init({
-        duration: 2000,
-    })
+    useEffect(()=>{
+        AOS.init({
+            duration: 2000,
+        })
+    },[])
+
     return (
 
 
@@ -42,8 +44,7 @@ function ContactUS() {
                             <Container style={{paddingLeft: '15%', paddingRight: '15%'}}>
                                 <div style={{
                                     fontSize: '6vw',
-                                    fontWeight: 'bold'
-                                }}>
+                                    fontWeight: 'bold'}}>
                                     Contact us
                                 </div>
                             </Container>

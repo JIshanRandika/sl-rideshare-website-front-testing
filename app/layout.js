@@ -2,6 +2,7 @@ import './globals.css'
 import { Inter } from 'next/font/google'
 import Navbar from '@/app/components/navbar.component';
 import 'bootstrap/dist/css/bootstrap.css';
+import 'aos/dist/aos.css'
 
 import '@fortawesome/fontawesome-free/css/all.min.css';
 import 'bootstrap-css-only/css/bootstrap.min.css';

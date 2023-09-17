@@ -1,8 +1,9 @@
 "use client"
-import React from 'react';
+import React, {useEffect} from 'react';
 import { MDBDataTable } from 'mdbreact';
 import {Col, Row} from "reactstrap";
 import {Colors} from "../constants/colors";
+import AOS from "aos";
 
 const DatatablePage = () => {
     const rejectedPassengerData = {
@@ -83,16 +84,22 @@ const DatatablePage = () => {
         ]
     };
 
+    useEffect(()=>{
+        AOS.init({
+            duration: 2000,
+        })
+    },[])
+
     return (
         <>
             <Row style={{marginTop:20, scrollMarginTop:76}}>
                 <Col  md="12" xs="12" className="mx-auto">
-                    <div className="text-center d-flex justify-content-center" style={{color:Colors.colorA,fontSize:40, fontWeight:"bold", marginTop:40, marginBottom:10}}>
+                    <div data-aos="fade-up" data-aos-offset="100" className="text-center d-flex justify-content-center" style={{color:Colors.colorA,fontSize:40, fontWeight:"bold", marginTop:40, marginBottom:10}}>
                         Rejected Passengers & Drivers
                     </div>
                 </Col>
             </Row>
-            <Row style={{paddingLeft:100, paddingRight:100, paddingTop:30}}>
+            <Row data-aos="fade-up" data-aos-offset="100" style={{paddingLeft:100, paddingRight:100, paddingTop:30}}>
                 <MDBDataTable
                     striped
                     bordered
@@ -102,12 +109,12 @@ const DatatablePage = () => {
             </Row>
             <Row style={{marginTop:10, scrollMarginTop:76}}>
                 <Col  md="12" xs="12" className="mx-auto">
-                    <div className="text-center d-flex justify-content-center" style={{color:Colors.colorA,fontSize:40, fontWeight:"bold", marginTop:40, marginBottom:10}}>
+                    <div data-aos="fade-up" data-aos-offset="100" className="text-center d-flex justify-content-center" style={{color:Colors.colorA,fontSize:40, fontWeight:"bold", marginTop:40, marginBottom:10}}>
                         Rejected Vehicles
                     </div>
                 </Col>
             </Row>
-            <Row style={{paddingLeft:100, paddingRight:100, paddingTop:30}}>
+            <Row data-aos="fade-up" data-aos-offset="100" style={{paddingLeft:100, paddingRight:100, paddingTop:30}}>
                 <MDBDataTable
                     striped
                     bordered
