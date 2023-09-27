@@ -164,7 +164,9 @@ export default function Home() {
                       <div style={{textAlign:"center", fontWeight:"bold", fontSize:20}}>Schedule</div>
                   </Row>
                   <Row style={{display:"flex", justifyContent:"center", alignItems:"center"}}>
-                      <div style={{textAlign:"center", fontSize:12}}>The Institute of Electrical and Electronics Engineers (IEEE) is the world largest technical professional organization dedicated to technological advancement.</div>
+                      <div style={{textAlign:"center", fontSize:12}}>
+                          Scheduling upcoming drive or walk
+                      </div>
                   </Row>
               </Col>
               <Col data-aos="fade-up" data-aos-offset="100" md="4" xs="12" className="mx-auto" >
@@ -181,7 +183,9 @@ export default function Home() {
                       <div style={{textAlign:"center", fontWeight:"bold", fontSize:20}}>Live</div>
                   </Row>
                   <Row style={{display:"flex", justifyContent:"center", alignItems:"center"}}>
-                      <div style={{textAlign:"center", fontSize:12}}>The Institute of Electrical and Electronics Engineers (IEEE) is the world largest technical professional organization dedicated to technological advancement.</div>
+                      <div style={{textAlign:"center", fontSize:12}}>
+                          Finding vehicles or passengers withing travel
+                      </div>
                   </Row>
               </Col>
               <Col data-aos="fade-up" data-aos-offset="100" md="4" xs="12" className="mx-auto" >
@@ -198,7 +202,9 @@ export default function Home() {
                       <div style={{textAlign:"center", fontWeight:"bold", fontSize:20}}>Hire</div>
                   </Row>
                   <Row style={{display:"flex", justifyContent:"center", alignItems:"center"}}>
-                      <div style={{textAlign:"center", fontSize:12}}>The Institute of Electrical and Electronics Engineers (IEEE) is the world largest technical professional organization dedicated to technological advancement.</div>
+                      <div style={{textAlign:"center", fontSize:12}}>
+                          Hiring any type of vehicle
+                      </div>
                   </Row>
               </Col>
           </Row>
