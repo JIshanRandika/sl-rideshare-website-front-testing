@@ -114,12 +114,11 @@ export default function Home() {
         </Row>
         <Row style={{paddingLeft:100, paddingRight:100, paddingTop:30}}>
             <Col md="6" xs="12" className="mx-auto" style={{display:"flex",alignItems:"center", justifyContent:"center"}}>
-              <div data-aos="fade-up" data-aos-offset="100" style={{fontSize:18}}>
-                The Institute of Electrical and Electronics Engineers (IEEE) is the world largest technical professional organization dedicated to technological advancement. IEEE student branch of Sabaragamuwa University of Sri Lanka was established in 2016 with the major goal of inheriting and retaining a high number of members and to engage in many community services thereby serving humanity for tomorrow.
-                The Institute of Electrical and Electronics Engineers (IEEE) is the world largest technical professional organization dedicated to technological advancement. IEEE student branch of Sabaragamuwa University of Sri Lanka was established in 2016 with the major goal of inheriting and retaining a high number of members and to engage in many community services thereby serving humanity for tomorrow.
+              <div data-aos="fade-up" data-aos-offset="100" style={{fontSize:18, textAlign:"center"}}>
+                  SL Rideshare is a platform to bring an economical value to moveable space on the road through connecting trustworthy drivers and passengers. We all find ourselves in the role of passengers or drivers at different times, whether we're using our own vehicles or those belonging to others. SL Rideshare is designed to cater to all parties, facilitating meaningful and safe journeys. Taxi drivers and anyone renting various types of vehicles can substantially improve their lifestyles by utilizing SL Rideshare. By sharing available space in a vehicle, you not only save valuable time but also have the opportunity to earn extra income.
               </div>
             </Col>
-            <Col md="6" xs="12" className="mx-auto">
+            <Col md="6" xs="12" className="mx-auto" >
 
                 <div data-aos="fade-up" data-aos-offset="100" style={{ position: 'relative', paddingBottom: '56.25%', height: 0 }}>
                     <iframe
@@ -130,14 +129,21 @@ export default function Home() {
                         style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '100%' }}
                     ></iframe>
                 </div>
-                <div style={{display:"flex", justifyContent:"center"}} className="language-buttons">
-                    <button data-aos="fade-up" data-aos-offset="100" style={{backgroundColor:Colors.colorA, border:"none", margin:20, color:"white", padding:10,borderRadius:10}} onClick={() => handleLanguageChange('sinhala')}>Sinhala</button>
-                    <button data-aos="fade-up" data-aos-offset="100" style={{backgroundColor:Colors.colorA, border:"none", margin:20, color:"white", padding:10,borderRadius:10}} onClick={() => handleLanguageChange('tamil')}>Tamil</button>
-                    <button data-aos="fade-up" data-aos-offset="100" style={{backgroundColor:Colors.colorA, border:"none", margin:20, color:"white", padding:10,borderRadius:10}} onClick={() => handleLanguageChange('english')}>English</button>
-                </div>
+
             </Col>
         </Row>
-          <Row style={{marginTop:20}}>
+          <Row>
+              <Col md="6" xs="12" className="mx-auto" >
+              </Col>
+              <Col md="6" xs="12" className="mx-auto" >
+                  <div style={{display:"flex", justifyContent:"center"}} className="language-buttons">
+                      <button data-aos="fade-up" data-aos-offset="100" style={{backgroundColor:Colors.colorA, border:"none", margin:20, color:"white", padding:10,borderRadius:10}} onClick={() => handleLanguageChange('sinhala')}>Sinhala</button>
+                      <button data-aos="fade-up" data-aos-offset="100" style={{backgroundColor:Colors.colorA, border:"none", margin:20, color:"white", padding:10,borderRadius:10}} onClick={() => handleLanguageChange('tamil')}>Tamil</button>
+                      <button data-aos="fade-up" data-aos-offset="100" style={{backgroundColor:Colors.colorA, border:"none", margin:20, color:"white", padding:10,borderRadius:10}} onClick={() => handleLanguageChange('english')}>English</button>
+                  </div>
+              </Col>
+          </Row>
+          <Row style={{marginTop:0}}>
               <Col  md="12" xs="12" className="mx-auto">
                   <div data-aos="fade-up" data-aos-offset="100" className="text-center d-flex justify-content-center" style={{color:Colors.colorA,fontSize:40, fontWeight:"bold", marginTop:40, marginBottom:10}}>
                       You can
@@ -273,7 +279,7 @@ export default function Home() {
                   </div>
               </Col>
           </Row>
-          <Row data-aos="fade-up" data-aos-offset="100" style={{paddingLeft:100, paddingRight:100, paddingTop:30}}>
+          <Row data-aos="fade-up" data-aos-offset="100" style={{paddingLeft:100, paddingRight:100, paddingTop:30, marginBottom:100}}>
               <div>
                   <Faq
                       data={data}
@@ -282,122 +288,122 @@ export default function Home() {
                   />
               </div>
           </Row>
-          <Row id='feedbacks' style={{marginTop:20, scrollMarginTop:76}}>
-              <Col  md="12" xs="12" className="mx-auto">
-                  <div data-aos="fade-up" data-aos-offset="100" className="text-center d-flex justify-content-center" style={{color:Colors.colorA,fontSize:40, fontWeight:"bold", marginTop:40, marginBottom:10}}>
-                      Feedbacks
-                  </div>
-              </Col>
-          </Row>
-          <Row data-aos="fade-up" data-aos-offset="100" style={{paddingLeft:100, paddingRight:100, paddingTop:30}}>
-              <VerticalTimeline>
 
-                  <VerticalTimelineElement
-                      className="vertical-timeline-element--work"
-                      dateClassName='dateClz'
-                      date={
-                          <div>
-                              <h3 className="vertical-timeline-element-title">Web Designer</h3>
-                              <h4 className="vertical-timeline-element-subtitle">San Francisco, CA</h4>
-                              <p>
-                                  User Experience, Visual Design
-                              </p>
-                          </div>
-                      }
-                      iconStyle={{ background: Colors.colorA, borderColor: '#fff', width:50, height:50}}
-                      icon={
-                          <div style={{display:"flex", justifyContent:"center", alignItems:"center", alignContent:"center", height:'100%'}}>
-                              <Image src="/feedback.png"
-                              width={40}
-                              height={40}
-                              />
-                          </div>
-                          }
-                  >
-                      <div style={{height:250}}>
-                          <iframe
-                              title="YouTube Video"
-                              src="https://www.youtube.com/embed/Tmblfb-9Hq8"
-                              frameBorder="0"
-                              allowFullScreen
-                              style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '100%' }}
-                          ></iframe>
-                      </div>
+          {/*############### Feedback ###############*/}
 
-                  </VerticalTimelineElement>
-                  <VerticalTimelineElement
-                      className="vertical-timeline-element--work"
-                      dateClassName='dateClz'
-                      date={
-                          <div>
-                              <h3 className="vertical-timeline-element-title">Web Designer</h3>
-                              <h4 className="vertical-timeline-element-subtitle">San Francisco, CA</h4>
-                              <p>
-                                  User Experience, Visual Design
-                              </p>
-                          </div>
-                      }
-                      iconStyle={{ background: Colors.colorA, borderColor: '#fff', width:50, height:50}}
-                      icon={
-                          <div style={{display:"flex", justifyContent:"center", alignItems:"center", alignContent:"center", height:'100%'}}>
-                              <Image src="/feedback.png"
-                                     width={40}
-                                     height={40}
-                              />
-                          </div>
-                      }
-                  >
-                      <div style={{height:250}}>
-                          <iframe
-                              title="YouTube Video"
-                              src="https://www.youtube.com/embed/Tmblfb-9Hq8"
-                              frameBorder="0"
-                              allowFullScreen
-                              style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '100%' }}
-                          ></iframe>
-                      </div>
+          {/*<Row id='feedbacks' style={{marginTop:20, scrollMarginTop:76}}>*/}
+          {/*    <Col  md="12" xs="12" className="mx-auto">*/}
+          {/*        <div data-aos="fade-up" data-aos-offset="100" className="text-center d-flex justify-content-center" style={{color:Colors.colorA,fontSize:40, fontWeight:"bold", marginTop:40, marginBottom:10}}>*/}
+          {/*            Feedbacks*/}
+          {/*        </div>*/}
+          {/*    </Col>*/}
+          {/*</Row>*/}
+          {/*<Row data-aos="fade-up" data-aos-offset="100" style={{paddingLeft:100, paddingRight:100, paddingTop:30}}>*/}
+          {/*    <VerticalTimeline>*/}
 
-                  </VerticalTimelineElement>
+          {/*        <VerticalTimelineElement*/}
+          {/*            className="vertical-timeline-element--work"*/}
+          {/*            dateClassName='dateClz'*/}
+          {/*            date={*/}
+          {/*                <div>*/}
+          {/*                    <h3 className="vertical-timeline-element-title">Web Designer</h3>*/}
+          {/*                    <h4 className="vertical-timeline-element-subtitle">San Francisco, CA</h4>*/}
+          {/*                    <p>*/}
+          {/*                        User Experience, Visual Design*/}
+          {/*                    </p>*/}
+          {/*                </div>*/}
+          {/*            }*/}
+          {/*            iconStyle={{ background: Colors.colorA, borderColor: '#fff', width:50, height:50}}*/}
+          {/*            icon={*/}
+          {/*                <div style={{display:"flex", justifyContent:"center", alignItems:"center", alignContent:"center", height:'100%'}}>*/}
+          {/*                    <Image src="/feedback.png"*/}
+          {/*                    width={40}*/}
+          {/*                    height={40}*/}
+          {/*                    />*/}
+          {/*                </div>*/}
+          {/*                }*/}
+          {/*        >*/}
+          {/*            <div style={{height:250}}>*/}
+          {/*                <iframe*/}
+          {/*                    title="YouTube Video"*/}
+          {/*                    src="https://www.youtube.com/embed/Tmblfb-9Hq8"*/}
+          {/*                    frameBorder="0"*/}
+          {/*                    allowFullScreen*/}
+          {/*                    style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '100%' }}*/}
+          {/*                ></iframe>*/}
+          {/*            </div>*/}
 
-                  <VerticalTimelineElement
-                      className="vertical-timeline-element--work"
-                      dateClassName='dateClz'
-                      date={
-                          <div>
-                              <h3 className="vertical-timeline-element-title">Web Designer</h3>
-                              <h4 className="vertical-timeline-element-subtitle">San Francisco, CA</h4>
-                              <p>
-                                  User Experience, Visual Design
-                              </p>
-                          </div>
-                      }
-                      iconStyle={{ background: Colors.colorA, borderColor: '#fff', width:50, height:50}}
-                      icon={
-                          <div style={{display:"flex", justifyContent:"center", alignItems:"center", alignContent:"center", height:'100%'}}>
-                              <Image src="/feedback.png"
-                                     width={40}
-                                     height={40}
-                              />
-                          </div>
-                      }
-                  >
-                      <div style={{height:250}}>
-                          <iframe
-                              title="YouTube Video"
-                              src="https://www.youtube.com/embed/Tmblfb-9Hq8"
-                              frameBorder="0"
-                              allowFullScreen
-                              style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '100%' }}
-                          ></iframe>
-                      </div>
+          {/*        </VerticalTimelineElement>*/}
+          {/*        <VerticalTimelineElement*/}
+          {/*            className="vertical-timeline-element--work"*/}
+          {/*            dateClassName='dateClz'*/}
+          {/*            date={*/}
+          {/*                <div>*/}
+          {/*                    <h3 className="vertical-timeline-element-title">Web Designer</h3>*/}
+          {/*                    <h4 className="vertical-timeline-element-subtitle">San Francisco, CA</h4>*/}
+          {/*                    <p>*/}
+          {/*                        User Experience, Visual Design*/}
+          {/*                    </p>*/}
+          {/*                </div>*/}
+          {/*            }*/}
+          {/*            iconStyle={{ background: Colors.colorA, borderColor: '#fff', width:50, height:50}}*/}
+          {/*            icon={*/}
+          {/*                <div style={{display:"flex", justifyContent:"center", alignItems:"center", alignContent:"center", height:'100%'}}>*/}
+          {/*                    <Image src="/feedback.png"*/}
+          {/*                           width={40}*/}
+          {/*                           height={40}*/}
+          {/*                    />*/}
+          {/*                </div>*/}
+          {/*            }*/}
+          {/*        >*/}
+          {/*            <div style={{height:250}}>*/}
+          {/*                <iframe*/}
+          {/*                    title="YouTube Video"*/}
+          {/*                    src="https://www.youtube.com/embed/Tmblfb-9Hq8"*/}
+          {/*                    frameBorder="0"*/}
+          {/*                    allowFullScreen*/}
+          {/*                    style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '100%' }}*/}
+          {/*                ></iframe>*/}
+          {/*            </div>*/}
 
-                  </VerticalTimelineElement>
-                  {/*<VerticalTimelineElement*/}
-                  {/*    iconStyle={{ background: 'rgb(16, 204, 82)', color: '#fff' }}*/}
-                  {/*    // icon={<StarIcon />}*/}
-                  {/*/>*/}
-              </VerticalTimeline>
-          </Row>
+          {/*        </VerticalTimelineElement>*/}
+
+          {/*        <VerticalTimelineElement*/}
+          {/*            className="vertical-timeline-element--work"*/}
+          {/*            dateClassName='dateClz'*/}
+          {/*            date={*/}
+          {/*                <div>*/}
+          {/*                    <h3 className="vertical-timeline-element-title">Web Designer</h3>*/}
+          {/*                    <h4 className="vertical-timeline-element-subtitle">San Francisco, CA</h4>*/}
+          {/*                    <p>*/}
+          {/*                        User Experience, Visual Design*/}
+          {/*                    </p>*/}
+          {/*                </div>*/}
+          {/*            }*/}
+          {/*            iconStyle={{ background: Colors.colorA, borderColor: '#fff', width:50, height:50}}*/}
+          {/*            icon={*/}
+          {/*                <div style={{display:"flex", justifyContent:"center", alignItems:"center", alignContent:"center", height:'100%'}}>*/}
+          {/*                    <Image src="/feedback.png"*/}
+          {/*                           width={40}*/}
+          {/*                           height={40}*/}
+          {/*                    />*/}
+          {/*                </div>*/}
+          {/*            }*/}
+          {/*        >*/}
+          {/*            <div style={{height:250}}>*/}
+          {/*                <iframe*/}
+          {/*                    title="YouTube Video"*/}
+          {/*                    src="https://www.youtube.com/embed/Tmblfb-9Hq8"*/}
+          {/*                    frameBorder="0"*/}
+          {/*                    allowFullScreen*/}
+          {/*                    style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '100%' }}*/}
+          {/*                ></iframe>*/}
+          {/*            </div>*/}
+
+          {/*        </VerticalTimelineElement>*/}
+          {/*       */}
+          {/*    </VerticalTimeline>*/}
+          {/*</Row>*/}
           {/*<Row style={{paddingLeft:100, paddingRight:100, paddingTop:100, marginTop:20, backgroundColor:"black"}}>*/}
           {/*</Row>*/}
 

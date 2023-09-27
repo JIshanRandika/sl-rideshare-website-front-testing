@@ -80,20 +80,20 @@ const NavbarComponent = () => {
                                             </button>
                                         </Link>
 
-                                        <Link href="/#feedbacks ">
-                                            <button
-                                                onClick={() => handleClick('feedbacks')}
-                                                style={{
-                                                    backgroundColor: Colors.colorA,
-                                                    border: "none",
-                                                    color: isActive === 'feedbacks' ? 'gray' : 'white',
-                                                    fontWeight:'bold',
-                                                    paddingRight:15
-                                                }}
-                                            >
-                                                Feedbacks
-                                            </button>
-                                        </Link>
+                                        {/*<Link href="/#feedbacks ">*/}
+                                        {/*    <button*/}
+                                        {/*        onClick={() => handleClick('feedbacks')}*/}
+                                        {/*        style={{*/}
+                                        {/*            backgroundColor: Colors.colorA,*/}
+                                        {/*            border: "none",*/}
+                                        {/*            color: isActive === 'feedbacks' ? 'gray' : 'white',*/}
+                                        {/*            fontWeight:'bold',*/}
+                                        {/*            paddingRight:15*/}
+                                        {/*        }}*/}
+                                        {/*    >*/}
+                                        {/*        Feedbacks*/}
+                                        {/*    </button>*/}
+                                        {/*</Link>*/}
                                         <Link href="/rejections">
                                             <button
                                                 onClick={() => handleClick('rejections')}
@@ -108,20 +108,20 @@ const NavbarComponent = () => {
                                                 Rejections
                                             </button>
                                         </Link>
-                                        <Link href="/blog">
-                                            <button
-                                                onClick={() => handleClick('tutorial')}
-                                                style={{
-                                                    backgroundColor: Colors.colorA,
-                                                    border: "none",
-                                                    color: isActive === 'tutorial' ? 'gray' : 'white',
-                                                    fontWeight:'bold',
-                                                    paddingRight:15
-                                                }}
-                                            >
-                                                Tutorial
-                                            </button>
-                                        </Link>
+                                        {/*<Link href="/blog">*/}
+                                        {/*    <button*/}
+                                        {/*        onClick={() => handleClick('tutorial')}*/}
+                                        {/*        style={{*/}
+                                        {/*            backgroundColor: Colors.colorA,*/}
+                                        {/*            border: "none",*/}
+                                        {/*            color: isActive === 'tutorial' ? 'gray' : 'white',*/}
+                                        {/*            fontWeight:'bold',*/}
+                                        {/*            paddingRight:15*/}
+                                        {/*        }}*/}
+                                        {/*    >*/}
+                                        {/*        Tutorial*/}
+                                        {/*    </button>*/}
+                                        {/*</Link>*/}
                                         <Link href="/#faq">
                                             <button
                                                 onClick={() => handleClick('faq')}

@@ -229,7 +229,7 @@ function ContactUS() {
                                        height={35}
                                        style={{marginRight:20}}
                                 />
-                                "Thilaka", Samagi Mawatha, Duwa Temple Road, Kalutara South
+                                No. 522/A, Samagi Mawatha, Duwa Temple Road, Kalutara South
                             </div>
                         </Container>
                     </Col>
