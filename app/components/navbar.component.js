@@ -12,7 +12,7 @@ import Image from "next/image";
 // import '../constants/styles.css'
 
 const NavbarComponent = () => {
-    const [isActive, setActive] = useState('');
+    const [isActive, setActive] = useState('home');
     const handleClick = (param) => {
         console.log(`Link clicked with param: ${param}`);
         setActive(param);
